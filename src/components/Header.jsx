@@ -1,4 +1,5 @@
 import React from 'react';
+import Incorrect from './Incorrect';
 
 const Header = props => {
   return (
@@ -21,8 +22,7 @@ const Header = props => {
     <header style={{margin: `50, 0, 60, 0`, paddingTop: 100, color: 'white', height: 400, backgroundImage: 'url(http://dzasv7x7a867v.cloudfront.net/product_photos/8879275/CIIIEpicPoster_original.jpg)'}}>
       <p className="text-center" style={{marginBottom: 50, fontSize: 40}}>Clicky Game</p>
       <p className="text-center" style={{fontSize: 30}}>Click on an image to earn points, but don't click on any more than once!</p>
-      {/* Tried to make this appear dynamically /*}
-      {/* <p className="text-center" style={{fontSize: 30, backgroundColor: 'red', opacity: props.guessedCorrectly ? 0 : 1}}>You already clicked that one!</p> */}
+      <Incorrect incorrect={props.guessedCorrectly}/>
     </header>
     </div>
   )
